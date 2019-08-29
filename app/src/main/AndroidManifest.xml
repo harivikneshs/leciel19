@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.barebrains.leciel19">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.barebrains.leciel19.gyanith19"
+        android:allowBackup="true"
+        android:icon="@drawable/l2"
+        android:label="Leciel 19"
+        android:roundIcon="@drawable/l2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Noactionbar">
+        <activity android:name="com.barebrains.leciel19.register" />
+        <activity
+            android:name="com.barebrains.leciel19.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name="com.barebrains.leciel19.MainActivity"
+            android:label="Leciel 19" />
+        <activity android:name="com.barebrains.leciel19.event_categories" />
+        <activity android:name="com.barebrains.leciel19.event_details" />
+        <activity android:name="com.barebrains.leciel19.profile" />
+        <activity android:name="com.barebrains.leciel19.splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.barebrains.leciel19.notreceiver">
+            <intent-filter>
+                <action android:name="gyanith.notify" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.barebrains.leciel19.about" />
+    </application>
+
+</manifest>
