@@ -3,19 +3,35 @@ package com.barebrains.leciel19;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.solver.widgets.Snapshot;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class home extends Fragment {
     private long delay1=0;
     private long delay2=0;
 
-
+    Button bl,br;
+    ImageView slide;
 
     public home() {
         // Required empty public constructor
@@ -38,6 +54,11 @@ public class home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root=inflater.inflate(R.layout.fragment_home, container, false);
+        slide=(ImageView)root.findViewById(R.id.slide);
+        bl=(Button)root.findViewById(R.id.bl);
+        br=(Button)root.findViewById(R.id.br);
+        slider s=new slider();
+
 
 
         ((CardView)root.findViewById(R.id.w)).setOnClickListener(new View.OnClickListener() {
@@ -159,13 +180,54 @@ public class home extends Fragment {
         delay2+=150;
 
 
-
+        s.run();
 
         return root;
     }
 
 
+    class slider extends Thread{
 
+        DatabaseReference dref;
+        List<String> Urls=new ArrayList<String>();
+        int counter=0,total=0;
+
+        slider(){
+            dref= FirebaseDatabase.getInstance().getReference();
+            dref.child("url").child("slide").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                        Log.i("info",snapshot.toString());
+                        Urls.add(snapshot.getValue().toString());
+                        total++;
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        public void run() {
+
+//                counter=counter%total;
+            Log.i("ll","kk");
+                try {
+                    Log.i("url",Urls.get(counter));
+                    URL url = new URL(Urls.get(counter));
+                    Glide.with(getContext()).load(url).into(slide);
+                }
+                catch(Exception e){
+
+                }
+//                counter++;
+
+
+        }
+    }
 
 
 

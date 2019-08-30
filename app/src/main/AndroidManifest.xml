@@ -40,5 +40,6 @@
 
         <activity android:name="com.barebrains.leciel19.about" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
