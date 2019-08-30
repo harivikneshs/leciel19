@@ -2,6 +2,8 @@ package com.barebrains.leciel19;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.constraint.solver.widgets.Snapshot;
 import android.support.v4.app.Fragment;
@@ -20,6 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -119,9 +122,9 @@ public class home extends Fragment {
         CardView nte=(CardView)root.findViewById(R.id.nte);
         nte.setAlpha(0);
         CardView ps=(CardView)root.findViewById(R.id.ps);
-       ps.setAlpha(0);
+        ps.setAlpha(0);
         CardView gl=(CardView)root.findViewById(R.id.gl);
-       gl.setAlpha(0);
+        gl.setAlpha(0);
         CardView un=(CardView)root.findViewById(R.id.ud);
         un.setAlpha(0);
 
@@ -180,7 +183,36 @@ public class home extends Fragment {
         delay2+=150;
 
 
-        s.run();
+        //Glide.with(getContext()).load()
+        ArrayList<String> urls=new ArrayList<String >();
+
+        DatabaseReference dref= FirebaseDatabase.getInstance().getReference().child("url").child("slide");
+        dref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //Log.i("lc19", dataSnapshot.toString());
+                for (DataSnapshot c:dataSnapshot.getChildren()){
+                    urls.add(c.getValue().toString());}
+                Log.i("lc19",urls.get(0));
+                try {
+                   Glide.with(root.getContext()).load(urls.get(0)).into(slide);
+                    Log.i("lc19","after setimage");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.i("lc19",databaseError.toString());
+
+            }
+        });
+
+
+
+
 
         return root;
     }
@@ -188,19 +220,30 @@ public class home extends Fragment {
 
     class slider extends Thread{
 
-        DatabaseReference dref;
-        List<String> Urls=new ArrayList<String>();
-        int counter=0,total=0;
+        /*public DatabaseReference dref;
+        public List<String> Urls;
+        public int counter=0,total=0;
 
         slider(){
+            Urls=new ArrayList<String>();
+            Log.i("lc19","came here");
             dref= FirebaseDatabase.getInstance().getReference();
-            dref.child("url").child("slide").addValueEventListener(new ValueEventListener() {
+            dref.child("url").child("slide").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    Log.i("lc19",dataSnapshot.toString());
                     for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                        Log.i("info",snapshot.toString());
                         Urls.add(snapshot.getValue().toString());
+                        Log.i("lc19",Urls.get(total));
                         total++;
+                    }
+                    while(!Urls.isEmpty());
+                    try {
+                        Log.i("url",Urls.get(counter));
+                        URL url = new URL(Urls.get(counter));
+                        Glide.with(getContext()).load(url).into(slide);
+                    }
+                    catch(Exception e){
                     }
                 }
 
@@ -209,26 +252,21 @@ public class home extends Fragment {
 
                 }
             });
+            run();
         }
 
         public void run() {
 
-//                counter=counter%total;
-            Log.i("ll","kk");
-                try {
-                    Log.i("url",Urls.get(counter));
-                    URL url = new URL(Urls.get(counter));
-                    Glide.with(getContext()).load(url).into(slide);
-                }
-                catch(Exception e){
-
-                }
-//                counter++;
-
+            while(!Urls.isEmpty());
+            try {
+                Log.i("url",Urls.get(counter));
+                URL url = new URL(Urls.get(counter));
+                Glide.with(getContext()).load(url).into(slide);
+            }
+            catch(Exception e){
+            }
+//            counter++;
 
         }
-    }
-
-
-
+    */}
 }

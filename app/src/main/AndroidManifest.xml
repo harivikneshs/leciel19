@@ -9,9 +9,9 @@
     <application
         android:name="com.barebrains.leciel19.gyanith19"
         android:allowBackup="true"
-        android:icon="@drawable/l2"
+        android:icon="@drawable/logo"
         android:label="Leciel 19"
-        android:roundIcon="@drawable/l2"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Noactionbar">
         <activity android:name="com.barebrains.leciel19.register" />

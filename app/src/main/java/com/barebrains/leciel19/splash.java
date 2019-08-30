@@ -18,7 +18,7 @@ public class splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-        getWindow().setEnterTransition(new Fade());
+        //getWindow().setEnterTransition(new Fade());
         setContentView(R.layout.activity_splash);
 
         //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
