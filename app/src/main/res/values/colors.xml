@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6a11cb</color>
-    <color name="colorPrimaryDark"> #090DEE</color>
-    <color name="colorAccent">#2575fc</color>
-    <color name="grey">#A7A2A2</color>
+    <color name="colorPrimaryDark">#090DEE</color>
+    <color name="colorAccent">#2575FC</color>
+    <color name="grey">#757373</color>
     <color name="blackbg">#FFFFFF</color>
     <color name="topb">#ffffff</color>
     <color name="topbar">#ff416c</color>
@@ -12,6 +12,6 @@
     <color name="whitealpha">#b4ffffff</color>
     <color name="redd">#ff0111</color>
     <color name="cardbg">#373748</color>
-    <color name="bg">#4D2575FC</color>
+    <color name="notbg">#AFB0FD</color>
     <color name="unselected">#64FFFFFF</color>
 </resources>
