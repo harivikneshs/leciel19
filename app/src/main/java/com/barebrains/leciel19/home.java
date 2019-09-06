@@ -2,10 +2,7 @@ package com.barebrains.leciel19;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.constraint.solver.widgets.Snapshot;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -13,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,17 +20,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class home extends Fragment {
     private long delay1=0;
     private long delay2=0;
 
-    Button bl,br;
-    ImageView slide;
+    ImageSlider imageSlider;
+    ArrayList<SlideModel> imageList = new ArrayList<>();
 
     public home() {
         // Required empty public constructor
@@ -57,13 +52,8 @@ public class home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root=inflater.inflate(R.layout.fragment_home, container, false);
-        slide=(ImageView)root.findViewById(R.id.slide);
-        bl=(Button)root.findViewById(R.id.bl);
-        br=(Button)root.findViewById(R.id.br);
-        slider s=new slider();
 
-
-
+        imageSlider=root.findViewById(R.id.imslide);
         ((CardView)root.findViewById(R.id.w)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -192,14 +182,8 @@ public class home extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //Log.i("lc19", dataSnapshot.toString());
                 for (DataSnapshot c:dataSnapshot.getChildren()){
-                    urls.add(c.getValue().toString());}
-                Log.i("lc19",urls.get(0));
-                try {
-                   Glide.with(root.getContext()).load(urls.get(0)).into(slide);
-                    Log.i("lc19","after setimage");
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
+                    imageList.add(new SlideModel(c.getValue().toString()));}
+                imageSlider.setImageList(imageList);
 
             }
 
@@ -218,55 +202,5 @@ public class home extends Fragment {
     }
 
 
-    class slider extends Thread{
-
-        /*public DatabaseReference dref;
-        public List<String> Urls;
-        public int counter=0,total=0;
-
-        slider(){
-            Urls=new ArrayList<String>();
-            Log.i("lc19","came here");
-            dref= FirebaseDatabase.getInstance().getReference();
-            dref.child("url").child("slide").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    Log.i("lc19",dataSnapshot.toString());
-                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                        Urls.add(snapshot.getValue().toString());
-                        Log.i("lc19",Urls.get(total));
-                        total++;
-                    }
-                    while(!Urls.isEmpty());
-                    try {
-                        Log.i("url",Urls.get(counter));
-                        URL url = new URL(Urls.get(counter));
-                        Glide.with(getContext()).load(url).into(slide);
-                    }
-                    catch(Exception e){
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-            run();
-        }
-
-        public void run() {
-
-            while(!Urls.isEmpty());
-            try {
-                Log.i("url",Urls.get(counter));
-                URL url = new URL(Urls.get(counter));
-                Glide.with(getContext()).load(url).into(slide);
-            }
-            catch(Exception e){
-            }
-//            counter++;
-
-        }
-    */}
 }
+

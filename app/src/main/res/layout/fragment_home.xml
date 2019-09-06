@@ -16,68 +16,54 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="700dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
 
-                <LinearLayout
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imslide"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/bl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
-
-                    <ImageView
-                        android:id="@+id/slide"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_weight="1"
-                         />
-
-                    <Button
-                        android:id="@+id/br"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
-                </LinearLayout>
+                    android:layout_height="250dp"
+                    android:layout_weight="1"
+                    app:placeholder="@drawable/placeholder"
+                    app:period="100"
+                    app:auto_cycle="true"/>
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/gl"
+                android:id="@+id/w"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#f62952"
+                app:cardBackgroundColor="#f22613"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/guestl" />
+                    android:background="@drawable/workshops" />
 
                 <TextView
-                    android:id="@+id/glt"
+                    android:id="@+id/wt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/livvicbold"
-                    android:gravity="center_horizontal"
-                    android:text="Guest Lectures"
+                    android:text="Workshops"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </android.support.v7.widget.CardView>
@@ -110,6 +96,37 @@
                     android:text="Pro shows"
                     android:textColor="@android:color/white"
 
+                    android:textSize="20sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/nte"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#19b5fe"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/nontecheve" />
+
+                <TextView
+                    android:id="@+id/ntet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/livvicbold"
+                    android:gravity="center_horizontal"
+                    android:text="Non Technical events"
+
+                    android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </android.support.v7.widget.CardView>
 
@@ -176,64 +193,35 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/nte"
+                android:id="@+id/gl"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#19b5fe"
+                app:cardBackgroundColor="#f62952"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageView8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/nontecheve" />
+                    android:background="@drawable/guestl" />
 
                 <TextView
-                    android:id="@+id/ntet"
+                    android:id="@+id/glt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/livvicbold"
                     android:gravity="center_horizontal"
-                    android:text="Non Technical events"
-
+                    android:text="Guest Lectures"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/w"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#f22613"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/workshops" />
-
-                <TextView
-                    android:id="@+id/wt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/livvicbold"
-                    android:text="Workshops"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp" />
-            </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
