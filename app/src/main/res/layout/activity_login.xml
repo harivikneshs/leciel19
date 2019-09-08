@@ -4,25 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/topb"
+    android:background="@drawable/gradient"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity">
 
     <!-- Login progress -->
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:srcCompat="@drawable/l" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/ralewayregular"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Registrations Opening shortly !"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
     <Button
         android:id="@+id/backbutlogin"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="top|left"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
         android:background="?attr/homeAsUpIndicator"
         android:backgroundTint="@android:color/white"
         android:foreground="?attr/selectableItemBackground" />
@@ -39,25 +59,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/gradient"
             android:gravity="center_horizontal"
             android:orientation="vertical"
+            android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-15dp"
-                app:srcCompat="@drawable/l2" />
+                app:srcCompat="@drawable/logo" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
                 android:textColorHint="#64ffffff"
                 app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
 
@@ -65,7 +86,7 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sofiaprolight"
+                    android:fontFamily="@font/gilroylight"
                     android:hint="User Id"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
@@ -79,8 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
                 android:textColorHint="#64ffffff"
                 app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
                 app:passwordToggleEnabled="true"
@@ -90,7 +111,7 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sofiaprolight"
+                    android:fontFamily="@font/gilroylight"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:maxLines="1"
@@ -108,13 +129,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/curve"
                 android:backgroundTint="#191fcd"
-                android:fontFamily="@font/splight"
+                android:fontFamily="@font/gilroylight"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="Sign in"
                 android:textColor="@android:color/white"
@@ -168,8 +189,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginTop="25dp"
+                    android:layout_marginBottom="20dp"
                     app:cardCornerRadius="20dp">
 
                     <FrameLayout
@@ -196,7 +217,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginBottom="7dp"
-                                android:fontFamily="@font/sofiaprolight"
+                                android:fontFamily="@font/gilroylight"
                                 android:text="GYANITHID"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/holo_orange_dark"
@@ -218,7 +239,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/sofiaprolight"
+                    android:fontFamily="@font/gilroylight"
                     android:textAlignment="textStart"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
@@ -228,7 +249,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/sofiaprolight"
+                    android:fontFamily="@font/gilroylight"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
@@ -237,10 +258,10 @@
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginBottom="40dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_marginTop="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="40dp"
                     android:background="?android:attr/listDivider"
                     android:foreground="#a1a1a1" />
 
@@ -249,7 +270,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
-                    android:fontFamily="@font/spbold"
+                    android:fontFamily="@font/gilroyextrabold"
                     android:text="Events Registered"
                     android:textColor="@color/whitealpha"
                     android:textSize="15sp" />
@@ -265,9 +286,9 @@
                     android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
                     android:layout_marginTop="25dp"
-                    android:fontFamily="@font/spbold"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/gilroyextrabold"
                     android:text="Workshops Registered"
                     android:textColor="@color/whitealpha"
                     android:textSize="15sp" />
@@ -283,10 +304,10 @@
                     android:id="@+id/divider3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_marginTop="40dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
                     android:background="?android:attr/listDivider"
                     android:foreground="#a1a1a1" />
 
@@ -309,8 +330,8 @@
         android:id="@+id/qrzoomed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="25dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="25dp"
         android:visibility="gone"
         app:cardCornerRadius="20dp">
 
@@ -334,7 +355,7 @@
                 android:layout_gravity="bottom|right"
                 android:layout_marginBottom="25dp"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/spsbold"
+                android:fontFamily="@font/gilroyextrabold"
                 android:gravity="center"
                 android:minHeight="40dp"
                 android:paddingLeft="30dp"
@@ -349,7 +370,7 @@
         android:id="@+id/wvreg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <Button
             android:id="@+id/backbutwv"
@@ -357,8 +378,8 @@
             android:layout_height="40dp"
             android:layout_gravity="top|left"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
             android:background="?attr/homeAsUpIndicator"
             android:backgroundTint="@android:color/white"
             android:foreground="?attr/selectableItemBackground" />

@@ -40,7 +40,7 @@
                         android:id="@+id/notificationSender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/pnbold"
+                        android:fontFamily="@font/opensansbold"
                         android:text="Developer"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
@@ -54,7 +54,7 @@
                         android:id="@+id/notificationTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/pnreg"
+                        android:fontFamily="@font/ralewayregular"
                         android:text="Sun 2:43 PM"
                         android:textColor="@android:color/white"
                         android:textSize="18sp" />
@@ -64,7 +64,7 @@
                     android:id="@+id/notificationText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pnreg"
+                    android:fontFamily="@font/ralewayregular"
                     android:text="Hi there, This is a sample notification from developers, but a little long to see how text flows multiple lines"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />

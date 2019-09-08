@@ -109,45 +109,37 @@ public class home extends Fragment {
         getContext().sendBroadcast(n);
 
 
-        CardView w=(CardView)root.findViewById(R.id.w);
-        CardView te=(CardView)root.findViewById(R.id.te);
-        CardView nte=(CardView)root.findViewById(R.id.nte);
-        nte.setAlpha(0);
-        CardView ps=(CardView)root.findViewById(R.id.ps);
-        ps.setAlpha(0);
-        CardView gl=(CardView)root.findViewById(R.id.gl);
-        gl.setAlpha(0);
-        CardView un=(CardView)root.findViewById(R.id.ud);
-        un.setAlpha(0);
+        CardView danc=(CardView)root.findViewById(R.id.w);
+        danc.setAlpha(0);
+        CardView mus=(CardView)root.findViewById(R.id.ps);
+        mus.setAlpha(0);
 
-        ObjectAnimator wa=ObjectAnimator.ofFloat(w,"translationX",-300f,0f);
-        wa.setInterpolator(new DecelerateInterpolator());
-        wa.setStartDelay(delay1);
-        wa.setDuration(300);
-        wa.start();
-        delay1+=150;
 
-        ObjectAnimator nta=ObjectAnimator.ofFloat(nte,"translationX",-300f,0f);
+
+
+        ObjectAnimator nta=ObjectAnimator.ofFloat(danc,"translationY",100f,0f);
         nta.setInterpolator(new DecelerateInterpolator());
         nta.setStartDelay(delay1);
         nta.setDuration(300);
         nta.start();
-        ObjectAnimator ntl=ObjectAnimator.ofFloat(nte,"alpha",0,1);
+        ObjectAnimator ntl=ObjectAnimator.ofFloat(danc,"alpha",0,1);
         ntl.setStartDelay(delay1);
+        ntl.setDuration(300);
         ntl.start();
-        delay1+=150;
+        delay1+=200;
 
-        ObjectAnimator ua=ObjectAnimator.ofFloat(un,"translationX",-300f,0f);
+        ObjectAnimator ua=ObjectAnimator.ofFloat(mus,"translationY",100f,0f);
         ua.setInterpolator(new DecelerateInterpolator());
         ua.setStartDelay(delay1);
         ua.setDuration(300);
         ua.start();
-        ObjectAnimator ul=ObjectAnimator.ofFloat(un,"alpha",0,1);
+        ObjectAnimator ul=ObjectAnimator.ofFloat(mus,"alpha",0,1);
         ul.setStartDelay(delay1);
+        ul.setDuration(300);
         ul.start();
-        delay1+=150;
+        delay1+=200;
 
-        ObjectAnimator ta=ObjectAnimator.ofFloat(te,"translationX",300f,0f);
+        /*ObjectAnimator ta=ObjectAnimator.ofFloat(te,"translationX",300f,0f);
         ta.setInterpolator(new DecelerateInterpolator());
         ta.setStartDelay(delay2);
         ta.setDuration(300);
@@ -172,7 +164,7 @@ public class home extends Fragment {
         ObjectAnimator gll=ObjectAnimator.ofFloat(gl,"alpha",0,1);
         gll.setStartDelay(delay2);
         gll.start();
-        delay2+=150;
+        delay2+=150;*/
 
         LinearLayout ll=root.findViewById(R.id.homell);
         DisplayMetrics dm=getContext().getResources().getDisplayMetrics();

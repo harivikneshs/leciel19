@@ -160,7 +160,7 @@ public class LoginActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this)
-                        .setIcon(R.drawable.signout)
+
                         .setTitle("Sign Out?")
                         .setMessage("Are you sure you want to sign out?")
                         .setPositiveButton("Sign out", new DialogInterface.OnClickListener() {

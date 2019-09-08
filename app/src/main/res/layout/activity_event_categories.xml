@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="250dp"
-        android:fontFamily="@font/pnbold"
+        android:fontFamily="@font/opensansbold"
         android:text="Will be updated soon."
         android:textColor="#96ffffff"
         android:textSize="24sp"
@@ -52,7 +52,7 @@
                 android:id="@+id/cattitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/splight"
+                android:fontFamily="@font/gilroylight"
                 android:text="TextView"
                 android:textColor="@android:color/white"
                 android:textSize="24sp" />

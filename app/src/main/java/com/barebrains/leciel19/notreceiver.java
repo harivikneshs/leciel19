@@ -47,7 +47,7 @@ public class notreceiver extends BroadcastReceiver {
                     for(DataSnapshot chi:dataSnapshot.getChildren()){
                         upd=chi;
                     }
-                    NotificationCompat.Builder b=new NotificationCompat.Builder(context,"gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l2).setContentTitle(upd.child("sender").getValue().toString());
+                    NotificationCompat.Builder b=new NotificationCompat.Builder(context,"gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l).setContentTitle(upd.child("sender").getValue().toString());
                     b.setContentText(upd.child("text").getValue().toString());
                     if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
                         int imp= NotificationManager.IMPORTANCE_DEFAULT;
@@ -96,7 +96,7 @@ public class notreceiver extends BroadcastReceiver {
                                 if ((ca.getTimeInMillis() <= st) && (ca.getTimeInMillis() >= nt)) {
 
 
-                                    NotificationCompat.Builder b = new NotificationCompat.Builder(context, "gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l2).setContentTitle(ich.child("name").getValue().toString());
+                                    NotificationCompat.Builder b = new NotificationCompat.Builder(context, "gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l).setContentTitle(ich.child("name").getValue().toString());
                                     Date d = new Date(st);
                                     SimpleDateFormat f = new SimpleDateFormat("hh:MM a");
                                     b.setContentText("Starting at " + f.format(d));

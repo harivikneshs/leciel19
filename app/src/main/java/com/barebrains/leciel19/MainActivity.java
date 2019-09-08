@@ -49,11 +49,15 @@ public class MainActivity extends AppCompatActivity {
                     replace(new favourites());
                     title.setText("Favourites");
                     return true;
+                case R.id.navigation_abt:
+                    replace(new abt());
+                    title.setText("About");
+                    return true;
                 case R.id.navigation_notifications:
                    replace(new notifications());
                     title.setText("Notifications");
                     item.setIcon(R.drawable.ic_baseline_notifications_24px);
-                    notif.edit().putBoolean("newnot",false);
+                    notif.edit().putBoolean("newnot",false).commit();
                     return true;
             }
             return false;
@@ -112,7 +116,13 @@ public class MainActivity extends AppCompatActivity {
 
         ((TextView)findViewById(R.id.title)).setText("Leciel 19");
 
-        ((Button)findViewById(R.id.account)).setOnClickListener(new View.OnClickListener() {
+
+        if(Build.VERSION.SDK_INT>Build.VERSION_CODES.M){
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+
+
+        ((ImageView)findViewById(R.id.prof)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	//Toast.makeText(getApplicationContext(), "Will be updated soon!", Toast.LENGTH_SHORT).show();
@@ -124,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(notif.getBoolean("newnot",false)){
-            navigation.getMenu().getItem(3).setIcon(R.drawable.ic_notification);
+           // navigation.getMenu().getItem(3).setIcon(R.drawable.ic_notification);
         }
 }
 

@@ -16,6 +16,10 @@
         android:icon="@drawable/ic_baseline_favorite_24px"
         android:title="fav" />
 
+    <item
+        android:id="@+id/navigation_abt"
+        android:icon="@drawable/abt"
+        android:title="about" />
 
     <item
         android:id="@+id/navigation_notifications"

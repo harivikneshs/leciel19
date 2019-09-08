@@ -28,7 +28,7 @@
                     android:id="@+id/time"
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/spsbold"
+                    android:fontFamily="@font/gilroyextrabold"
                     android:gravity="center_vertical|center_horizontal"
                     android:text="9:00"
                     android:textColor="@android:color/white"
@@ -54,7 +54,7 @@
                         android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/pnreg"
+                        android:fontFamily="@font/ralewayregular"
                         android:text="Inaguration Ceremony"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
@@ -63,7 +63,7 @@
                         android:id="@+id/venue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/pnreg"
+                        android:fontFamily="@font/ralewayregular"
                         android:text="Main Stage"
                         android:textColor="@color/whitealpha" />
                 </LinearLayout>

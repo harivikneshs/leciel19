@@ -24,7 +24,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="210dp"
-            android:fontFamily="@font/pnbold"
+            android:fontFamily="@font/opensansbold"
             android:gravity="center"
             android:text="Tap  ♥ button in events to add to favourites and get notified"
             android:textColor="#96ffffff"

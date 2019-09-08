@@ -36,7 +36,7 @@ public class abt extends Fragment {
 
 
     private Boolean show=false;
-    private String furl,iurl,wurl;
+    private String furl,iurl,wurl,yturl;
     private DatabaseReference db,fb;
     Typeface font,fontt;
     public abt() {
@@ -66,8 +66,8 @@ public class abt extends Fragment {
         final FloatingActionButton share=(FloatingActionButton)root.findViewById(R.id.sharebut);
         final FloatingActionButton directions=(FloatingActionButton)root.findViewById(R.id.direcbut);
         final FloatingActionButton feed=(FloatingActionButton)root.findViewById(R.id.feebut);
-        fontt= Typeface.createFromAsset(getContext().getAssets(),"fonts/sofiaprolight.otf");
-        font=Typeface.createFromAsset(getContext().getAssets(),"fonts/pnreg.otf");
+        /*fontt= Typeface.createFromAsset(getActivity().getAssets(),"font/gilroylight.otf");
+        font=Typeface.createFromAsset(getContext().getAssets(),"font/opensansregular.ttf");*/
 
 
         db.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -77,6 +77,7 @@ public class abt extends Fragment {
                 furl=dataSnapshot.child("fburl").getValue().toString();
                 iurl=dataSnapshot.child("inurl").getValue().toString();
                 wurl=dataSnapshot.child("wburl").getValue().toString();
+                yturl=dataSnapshot.child("yturl").getValue().toString();
             }
 
             @Override
@@ -132,7 +133,7 @@ public class abt extends Fragment {
                 b.setNeutralButton("Rate us", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.barebrains.gyanith19"));
+                        Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.barebrains.leciel19"));
                         startActivity(w);
                     }
                 });
@@ -216,13 +217,79 @@ public class abt extends Fragment {
                 startActivity(w);
             }
         });
-        ((ImageButton)root.findViewById(R.id.web)).setOnClickListener(new View.OnClickListener() {
+        ((Button)root.findViewById(R.id.button5)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse(wurl));
                 startActivity(w);
             }
         });
+        ((Button)root.findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse(yturl));
+                startActivity(w);
+            }
+        });
+
+
+
+        ObjectAnimator b1=ObjectAnimator.ofFloat(root.findViewById(R.id.button4),"scaleX",0.1f,1.0f);
+        ObjectAnimator b11=ObjectAnimator.ofFloat(root.findViewById(R.id.button4),"scaleY",0.1f,1.0f);
+        ObjectAnimator b12=ObjectAnimator.ofFloat(root.findViewById(R.id.button4),"alpha",0.0f,1.0f);
+        b12.start();
+        b1.setDuration(250);
+        b1.setInterpolator(new DecelerateInterpolator());
+        b1.start();
+        b11.setDuration(250);
+        b11.setInterpolator(new DecelerateInterpolator());
+        b11.start();
+
+        ObjectAnimator b2=ObjectAnimator.ofFloat(root.findViewById(R.id.button3),"scaleX",0.1f,1.0f);
+        ObjectAnimator b22=ObjectAnimator.ofFloat(root.findViewById(R.id.button3),"scaleY",0.1f,1.0f);
+        ObjectAnimator b21=ObjectAnimator.ofFloat(root.findViewById(R.id.button3),"alpha",0.0f,1.0f);
+        b21.setStartDelay(250);
+        b21.start();
+        b2.setDuration(250);
+        b2.setInterpolator(new DecelerateInterpolator());
+        b2.setStartDelay(250);
+        b2.start();
+        b22.setDuration(250);
+        b22.setInterpolator(new DecelerateInterpolator());
+        b22.setStartDelay(250);
+        b22.start();
+
+
+
+        ObjectAnimator b3=ObjectAnimator.ofFloat(root.findViewById(R.id.button2),"scaleX",0.1f,1.0f);
+        ObjectAnimator b33=ObjectAnimator.ofFloat(root.findViewById(R.id.button2),"scaleY",0.1f,1.0f);
+        ObjectAnimator b31=ObjectAnimator.ofFloat(root.findViewById(R.id.button2),"alpha",0.0f,1.0f);
+        b31.setStartDelay(500);
+        b31.start();
+        b3.setDuration(250);
+        b3.setInterpolator(new DecelerateInterpolator());
+        b3.setStartDelay(500);
+        b3.start();
+        b33.setDuration(250);
+        b33.setInterpolator(new DecelerateInterpolator());
+        b33.setStartDelay(500);
+        b33.start();
+
+
+        ObjectAnimator b4=ObjectAnimator.ofFloat(root.findViewById(R.id.button5),"scaleX",0.1f,1.0f);
+        ObjectAnimator b44=ObjectAnimator.ofFloat(root.findViewById(R.id.button5),"scaleY",0.1f,1.0f);
+        ObjectAnimator b41=ObjectAnimator.ofFloat(root.findViewById(R.id.button5),"alpha",0.0f,1.0f);
+        b41.setStartDelay(750);
+        b41.start();
+        b4.setDuration(250);
+        b4.setInterpolator(new DecelerateInterpolator());
+        b4.setStartDelay(750);
+        b4.start();
+        b44.setDuration(250);
+        b44.setInterpolator(new DecelerateInterpolator());
+        b44.setStartDelay(750);
+        b44.start();
+
 
         return root;
     }

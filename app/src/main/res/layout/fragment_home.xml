@@ -31,10 +31,10 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_margin="0dp"
+                    android:layout_margin="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1.5"
-                    app:cardCornerRadius="0dp"
+                    app:cardCornerRadius="10dp"
                     app:cardElevation="0dp">
 
                     <com.denzcoskun.imageslider.ImageSlider
@@ -42,7 +42,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:auto_cycle="true"
-                        app:period="2000" />
+                        app:period="2000"
+                        app:placeholder="@drawable/bg" />
 
                 </android.support.v7.widget.CardView>
 
@@ -51,20 +52,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:fontFamily="@font/ralewayregular"
                     android:text="Explore"
                     android:textColor="@android:color/black"
-                    android:textSize="24sp"
-                    android:visibility="gone" />
+                    android:textSize="20sp"
+                    android:visibility="visible" />
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/w"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#f22613"
@@ -82,9 +84,9 @@
                     android:id="@+id/ps"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#03a678"
@@ -103,9 +105,9 @@
                     android:id="@+id/nte"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#19b5fe"
@@ -123,9 +125,9 @@
                     android:id="@+id/te"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#5b3256"
@@ -135,7 +137,7 @@
                         android:id="@+id/imageView6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/lit" />
+                        android:background="@drawable/literature" />
 
                 </android.support.v7.widget.CardView>
 
@@ -143,9 +145,9 @@
                     android:id="@+id/ud"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#7b1fa2"
@@ -155,7 +157,7 @@
                         android:id="@+id/imageView5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/inf" />
+                        android:background="@drawable/informals" />
 
                 </android.support.v7.widget.CardView>
 
@@ -163,9 +165,9 @@
                     android:id="@+id/gl"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#f62952"
@@ -183,9 +185,9 @@
                     android:id="@+id/psh"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#f62952"
@@ -195,7 +197,7 @@
                         android:id="@+id/pshi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/pro" />
+                        android:background="@drawable/proshow" />
 
                 </android.support.v7.widget.CardView>
 
