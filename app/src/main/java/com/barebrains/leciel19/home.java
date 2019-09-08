@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.LinearLayout;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -171,6 +173,14 @@ public class home extends Fragment {
         gll.setStartDelay(delay2);
         gll.start();
         delay2+=150;
+
+        LinearLayout ll=root.findViewById(R.id.homell);
+        DisplayMetrics dm=getContext().getResources().getDisplayMetrics();
+        float dh=5*dm.heightPixels/dm.density;
+        ViewGroup.LayoutParams lp=ll.getLayoutParams();
+        lp.height=(int)dh;
+        ll.setLayoutParams(lp);
+
 
 
         //Glide.with(getContext()).load()

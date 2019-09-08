@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6a11cb</color>
+    <color name="colorPrimary">#2575FC</color>
     <color name="colorPrimaryDark">#090DEE</color>
     <color name="colorAccent">#2575FC</color>
     <color name="grey">#757373</color>
@@ -13,5 +13,6 @@
     <color name="redd">#ff0111</color>
     <color name="cardbg">#373748</color>
     <color name="notbg">#AFB0FD</color>
+    <color name="gradv">#6a11cb</color>
     <color name="unselected">#64FFFFFF</color>
 </resources>
