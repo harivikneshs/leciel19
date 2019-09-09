@@ -20,11 +20,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.net.URL;
 
 public class event_details extends AppCompatActivity {
 
@@ -39,7 +42,7 @@ public class event_details extends AppCompatActivity {
     Button bb2;
     String tab1,tab2,tab3;
     Context context;
-    String id="";
+    String id="",img;
     AlertDialog.Builder a;
     AlertDialog vi;
 
@@ -54,7 +57,7 @@ public class event_details extends AppCompatActivity {
         a=new AlertDialog.Builder(this);
 
 
-        sp= this.getSharedPreferences("com.barebrains.Gyanith19",MODE_PRIVATE);
+        sp= this.getSharedPreferences("com.barebrains.leciel19",MODE_PRIVATE);
 
         bb2=findViewById(R.id.backbut2);
         intent = getIntent();
@@ -82,7 +85,8 @@ public class event_details extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     title.setText(dataSnapshot.child("name").getValue().toString());
-                    for(DataSnapshot snapshot:dataSnapshot.child("details").getChildren()){
+                    img=dataSnapshot.child("imgurl").getValue().toString();
+                    for(DataSnapshot snapshot:dataSnapshot.child("detail").getChildren()){
                         if(snapshot.getKey().toString().charAt(0)=='1'){
                             tab1=snapshot.getValue().toString();
                             desc.setText(tab1);
@@ -95,9 +99,7 @@ public class event_details extends AppCompatActivity {
                             tab3=snapshot.getValue().toString();
                         }
                     }
-                    int id = getResources().getIdentifier("com.barebrains.gyanith19:drawable/" + tag.toLowerCase()+'b', null, null);
-                    if(id!=0)
-                    ((ImageView)findViewById(R.id.eveimv)).setBackgroundResource(id);
+                Glide.with(context).load(img).centerCrop().into(eveimage);
             }
 
             @Override
@@ -156,11 +158,17 @@ public class event_details extends AppCompatActivity {
 
             }
         });
-        if(tag.charAt(0)=='N')
-            ((Button)findViewById(R.id.reg)).setVisibility(View.GONE);
-        if(tag.equals("Tg")) {
-            ((Button) findViewById(R.id.reg)).setText("Topics");
-        }
+
+
+
+
+
+/*removed register button*/
+        ((Button)findViewById(R.id.reg)).setVisibility(View.GONE);
+                                                                            /*removed register button*/
+
+
+
 
 
 

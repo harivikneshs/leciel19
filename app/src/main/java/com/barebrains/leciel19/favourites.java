@@ -54,7 +54,7 @@ public class favourites extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View root = inflater.inflate(R.layout.fragment_favourites, container, false);
-        sp = getContext().getSharedPreferences("com.barebrains.Gyanith19", Context.MODE_PRIVATE);
+        sp = getContext().getSharedPreferences("com.barebrains.leciel19", Context.MODE_PRIVATE);
         ref= FirebaseDatabase.getInstance().getReference();
         items=new ArrayList<eventitem>();
         lvi=root.findViewById(R.id.favlv);
@@ -67,7 +67,7 @@ public class favourites extends Fragment {
                 items.clear();
                 for(DataSnapshot sh:dataSnapshot.getChildren()){
                     for(DataSnapshot snapshot:sh.getChildren()){
-                        if(snapshot.child("desc").exists()){
+                        if(snapshot.child("name").exists()){
 
                             Log.i("tagy",snapshot.getKey());
                             if(sp.getBoolean(snapshot.getKey(),false)) {
@@ -76,6 +76,7 @@ public class favourites extends Fragment {
                                     items.add(it);
                                     //((TextView)root.findViewById(R.id.textView13)).setVisibility(View.GONE);
                                     tag.add(snapshot.getKey());
+                                    Log.i("tagyyya",snapshot.getKey());
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
@@ -107,17 +108,23 @@ public class favourites extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(tag.get(position).toString().charAt(0)){
-                    case 'W':
-                        cat= "Workshop";
+                    case 'd':
+                        cat= "dance";
                         break;
-                    case 'G':
-                        cat="Guest Lectures";
+                    case 'm':
+                        cat="music";
                         break;
-                    case 'T':
-                        cat="Technical Events";
+                    case 'a':
+                        cat="art";
                         break;
-                    case 'N':
-                        cat="Non Technical Events";
+                    case 'l':
+                        cat="literary";
+                        break;
+                    case 'i':
+                        cat="informals";
+                        break;
+                    case 'o':
+                        cat="online";
                         break;
                     case 'P':
                         cat="Pro Shows";

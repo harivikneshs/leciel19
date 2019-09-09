@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:auto_cycle="true"
-                        app:period="2000"
+                        app:period="1750"
                         app:placeholder="@drawable/bg" />
 
                 </android.support.v7.widget.CardView>
@@ -61,7 +61,7 @@
                     android:visibility="visible" />
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/w"
+                    android:id="@+id/d"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -81,7 +81,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/ps"
+                    android:id="@+id/m"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -102,7 +102,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/nte"
+                    android:id="@+id/a"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -122,7 +122,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/te"
+                    android:id="@+id/l"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -142,7 +142,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/ud"
+                    android:id="@+id/i"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -162,7 +162,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/gl"
+                    android:id="@+id/o"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"
@@ -182,7 +182,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/psh"
+                    android:id="@+id/ps"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="5dp"

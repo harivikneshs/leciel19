@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -97,6 +98,7 @@ public class event_categories extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 i1.putExtra("category",s);
+                Log.i("tagyyy",tag.get(position).toString());
                 i1.putExtra("tag",tag.get(position).toString());
                 startActivity(i1);
             }

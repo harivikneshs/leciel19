@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.barebrains.gyanith19"
+        applicationId "com.barebrains.leciel19"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1

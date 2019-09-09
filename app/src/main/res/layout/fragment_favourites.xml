@@ -22,12 +22,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="210dp"
+            android:layout_marginRight="10dp"
             android:fontFamily="@font/opensansbold"
             android:gravity="center"
             android:text="Tap  ♥ button in events to add to favourites and get notified"
-            android:textColor="#96ffffff"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             android:visibility="gone" />
 

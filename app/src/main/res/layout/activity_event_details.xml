@@ -112,7 +112,7 @@
                         android:fontFamily="@font/gilroylight"
                         android:gravity="center"
                         android:text="Introduction to deep learning"
-                        android:textColor="@android:color/white"
+                        android:textColor="@android:color/black"
                         android:textSize="32sp" />
 
                 </LinearLayout>
@@ -124,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                app:tabSelectedTextColor="@android:color/white"
+                app:tabSelectedTextColor="@color/gradv"
                 app:tabTextColor="@color/unselected">
 
                 <android.support.design.widget.TabItem
@@ -154,7 +154,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/ralewayregular"
                 android:text="Loading please wait"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>

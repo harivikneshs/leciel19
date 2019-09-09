@@ -39,7 +39,7 @@ public class register extends AppCompatActivity {
         context=this;
         Log.i("REGISTER","YESSIR");
 
-        SharedPreferences sp = getSharedPreferences("com.barebrains.gyanith19", MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("com.barebrains.leciel19", MODE_PRIVATE);
         String uid = sp.getString("userid","");
         String pw = sp.getString("userpasshash","");
 

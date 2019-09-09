@@ -33,7 +33,7 @@ public class notreceiver extends BroadcastReceiver {
         Log.d("not","triggered");
         //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         //Toast.makeText(context, "Hi", Toast.LENGTH_SHORT).show();
-        sp = context.getSharedPreferences("com.barebrains.Gyanith19", Context.MODE_PRIVATE);
+        sp = context.getSharedPreferences("com.barebrains.leciel19", Context.MODE_PRIVATE);
 
         ndb= FirebaseDatabase.getInstance().getReference().child("notifications");
        sdb= FirebaseDatabase.getInstance().getReference();

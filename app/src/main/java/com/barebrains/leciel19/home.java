@@ -56,30 +56,55 @@ public class home extends Fragment {
         View root=inflater.inflate(R.layout.fragment_home, container, false);
 
         imageSlider=root.findViewById(R.id.imslide);
-        ((CardView)root.findViewById(R.id.w)).setOnClickListener(new View.OnClickListener() {
+        ((CardView)root.findViewById(R.id.d)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),event_categories.class);
-                i.putExtra("category","Workshop");
+                i.putExtra("category","dance");
                 startActivity(i);
             }
         });
-        ((CardView)root.findViewById(R.id.te)).setOnClickListener(new View.OnClickListener() {
+        ((CardView)root.findViewById(R.id.m)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),event_categories.class);
-                i.putExtra("category","Technical Events");
+                i.putExtra("category","music");
                 startActivity(i);
             }
         });
-        ((CardView)root.findViewById(R.id.nte)).setOnClickListener(new View.OnClickListener() {
+        ((CardView)root.findViewById(R.id.a)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),event_categories.class);
-                i.putExtra("category","Non Technical Events");
+                i.putExtra("category","art");
                 startActivity(i);
             }
         });
+        ((CardView)root.findViewById(R.id.l)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getContext(),event_categories.class);
+                i.putExtra("category","literary");
+                startActivity(i);
+            }
+        });
+        ((CardView)root.findViewById(R.id.i)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getContext(),about.class);
+                i.putExtra("category","informals");
+                startActivity(i);
+            }
+        });
+        ((CardView)root.findViewById(R.id.o)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getContext(),event_categories.class);
+                i.putExtra("category","online");
+                startActivity(i);
+            }
+        });
+
         ((CardView)root.findViewById(R.id.ps)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,30 +113,14 @@ public class home extends Fragment {
                 startActivity(i);
             }
         });
-        ((CardView)root.findViewById(R.id.ud)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getContext(),about.class);
-              //  i.putExtra("category","Unnamed");
-                startActivity(i);
-            }
-        });
-        ((CardView)root.findViewById(R.id.gl)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getContext(),event_categories.class);
-                i.putExtra("category","Guest Lectures");
-                startActivity(i);
-            }
-        });
 
         Intent n=new Intent("gyanith.notify");
         getContext().sendBroadcast(n);
 
 
-        CardView danc=(CardView)root.findViewById(R.id.w);
+        CardView danc=(CardView)root.findViewById(R.id.d);
         danc.setAlpha(0);
-        CardView mus=(CardView)root.findViewById(R.id.ps);
+        CardView mus=(CardView)root.findViewById(R.id.m);
         mus.setAlpha(0);
 
 
