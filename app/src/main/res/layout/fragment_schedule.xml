@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tabIndicatorColor="@color/redd"
-                app:tabSelectedTextColor="@color/gradv"
+                app:tabSelectedTextColor="@android:color/white"
                 app:tabTextColor="@color/unselected">
 
                 <android.support.design.widget.TabItem
@@ -56,18 +56,19 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp">
 
                 <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <fragment
-                    android:id="@+id/fragment"
-                    android:name="com.barebrains.leciel19.schtab0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </FrameLayout>
+                    <fragment
+                        android:id="@+id/fragment"
+                        android:name="com.barebrains.leciel19.schtab0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
             </android.support.v4.view.ViewPager>
 
         </LinearLayout>

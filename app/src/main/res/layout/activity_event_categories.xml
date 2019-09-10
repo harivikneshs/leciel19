@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/topb"
+    android:background="#FAFAFA"
     tools:context=".event_categories">
 
     <ProgressBar
@@ -34,8 +34,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
+            android:layout_height="80dp"
+            android:background="@drawable/gradient"
+            android:gravity="bottom|center_vertical"
             android:orientation="horizontal">
 
             <Button
@@ -44,6 +45,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 android:background="?attr/homeAsUpIndicator"
                 android:backgroundTint="@android:color/white"
                 android:foreground="?attr/selectableItemBackground" />

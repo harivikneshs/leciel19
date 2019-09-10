@@ -17,6 +17,7 @@ import android.transition.Fade;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.fadein,R.anim.fadeout);
         super.onCreate(savedInstanceState);
+
+
+
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().setEnterTransition(new Fade());
         setContentView(R.layout.main_layout);

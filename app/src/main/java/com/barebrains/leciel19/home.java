@@ -91,8 +91,8 @@ public class home extends Fragment {
         ((CardView)root.findViewById(R.id.i)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getContext(),about.class);
-                i.putExtra("category","informals");
+                Intent i=new Intent(getContext(),event_categories.class);
+                i.putExtra("category","more");
                 startActivity(i);
             }
         });
