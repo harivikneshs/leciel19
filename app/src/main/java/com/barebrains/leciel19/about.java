@@ -112,7 +112,7 @@ public class about extends AppCompatActivity {
                 b.setNeutralButton("Rate us", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.barebrains.gyanith19"));
+                        Intent w=new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.barebrains.leciel19"));
                         startActivity(w);
                     }
                 });

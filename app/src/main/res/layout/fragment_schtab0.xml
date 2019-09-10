@@ -14,7 +14,7 @@
         android:fontFamily="@font/opensansbold"
         android:gravity="center"
         android:text="No events live currently"
-        android:textColor="#96ffffff"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:visibility="gone" />
 

@@ -140,7 +140,7 @@ public class abt extends Fragment {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 String shareBody = "Check out the Leciel app\n https://play.google.com/store/apps/details?id=com.barebrains.leciel19";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Download Gyanith app");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Download Leciel app");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
             }
@@ -152,15 +152,15 @@ public class abt extends Fragment {
             @Override
             public void onClick(View v) {
                 if(!show){
-                    ObjectAnimator s=ObjectAnimator.ofFloat(share,"translationY",0f,-130f);
+                    ObjectAnimator s=ObjectAnimator.ofFloat(share,"translationY",0f,-220f);
                     s.setDuration(400);
                     s.setInterpolator(new DecelerateInterpolator());
                     s.start();
-                    ObjectAnimator d=ObjectAnimator.ofFloat(directions,"translationY",0f,-260f);
+                    ObjectAnimator d=ObjectAnimator.ofFloat(directions,"translationY",0f,-440f);
                     d.setDuration(400);
                     d.setInterpolator(new DecelerateInterpolator());
                     d.start();
-                    ObjectAnimator f=ObjectAnimator.ofFloat(feed,"translationY",0f,-390f);
+                    ObjectAnimator f=ObjectAnimator.ofFloat(feed,"translationY",0f,-660f);
                     f.setDuration(400);
                     f.setInterpolator(new DecelerateInterpolator());
 
@@ -172,15 +172,15 @@ public class abt extends Fragment {
                     show=!show;
                 }else {
 
-                    ObjectAnimator s=ObjectAnimator.ofFloat(share,"translationY",-130f,0f);
+                    ObjectAnimator s=ObjectAnimator.ofFloat(share,"translationY",-220,0f);
                     s.setDuration(400);
                     s.setInterpolator(new DecelerateInterpolator());
                     s.start();
-                    ObjectAnimator d=ObjectAnimator.ofFloat(directions,"translationY",-260f,0f);
+                    ObjectAnimator d=ObjectAnimator.ofFloat(directions,"translationY",-440,0f);
                     d.setDuration(400);
                     d.setInterpolator(new DecelerateInterpolator());
                     d.start();
-                    ObjectAnimator f=ObjectAnimator.ofFloat(feed,"translationY",-390f,0f);
+                    ObjectAnimator f=ObjectAnimator.ofFloat(feed,"translationY",-660,0f);
                     f.setDuration(400);
                     f.setInterpolator(new DecelerateInterpolator());
 

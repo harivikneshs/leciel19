@@ -92,7 +92,7 @@ public class home extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),event_categories.class);
-                i.putExtra("category","more");
+                i.putExtra("category","informals");
                 startActivity(i);
             }
         });
