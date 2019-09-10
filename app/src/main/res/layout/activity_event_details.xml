@@ -39,23 +39,19 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="272dp"
+                android:layout_marginTop="35dp"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/eveimv"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:background="@null" />
-
-                <ImageView
-                    android:id="@+id/fh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:alpha="0"
-                    android:tint="#ff0111"
-                    app:srcCompat="@drawable/ic_baseline_favorite_24px" />
-
+                <Button
+                    android:id="@+id/backbut2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?attr/homeAsUpIndicator"
+                    android:backgroundTint="@android:color/white"
+                    android:foreground="?attr/selectableItemBackground" />
 
                 <FrameLayout
                     android:layout_width="45dp"
@@ -87,16 +83,21 @@
 
                 </FrameLayout>
 
-                <Button
-                    android:id="@+id/backbut2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="10dp"
-                    android:background="?attr/homeAsUpIndicator"
-                    android:backgroundTint="@android:color/white"
-                    android:foreground="?attr/selectableItemBackground" />
+
+                <ImageView
+                    android:id="@+id/eveimv"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@null" />
+
+                <ImageView
+                    android:id="@+id/fh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0"
+                    android:tint="#ff0111"
+                    app:srcCompat="@drawable/ic_baseline_favorite_24px" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -112,7 +113,7 @@
                         android:fontFamily="@font/gilroylight"
                         android:gravity="center"
                         android:text="Introduction to deep learning"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="32sp" />
 
                 </LinearLayout>
