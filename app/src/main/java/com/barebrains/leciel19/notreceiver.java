@@ -48,7 +48,11 @@ public class notreceiver extends BroadcastReceiver {
                         upd=chi;
                     }
                     NotificationCompat.Builder b=new NotificationCompat.Builder(context,"gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l).setContentTitle(upd.child("sender").getValue().toString());
-                    b.setContentText(upd.child("text").getValue().toString());
+                    try{
+                        b.setContentText(upd.child("text").getValue().toString());
+                    }
+                    catch(Exception e){}
+
                     if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
                         int imp= NotificationManager.IMPORTANCE_DEFAULT;
                         NotificationChannel c=new NotificationChannel("gyanith","notification",imp);

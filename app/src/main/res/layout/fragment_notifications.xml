@@ -32,7 +32,20 @@
             android:layout_height="match_parent"
             android:divider="@null"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            tools:layout_editor_absoluteX="0dp">
+
+        </ListView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_add_black_18dp" />
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
