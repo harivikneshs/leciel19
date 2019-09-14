@@ -41,11 +41,13 @@ public class notreceiver extends BroadcastReceiver {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+
                 Long count=dataSnapshot.getChildrenCount();
                 DataSnapshot upd=null;
                 if(count>sp.getLong("notcount",0)){
                     for(DataSnapshot chi:dataSnapshot.getChildren()){
                         upd=chi;
+                        Log.d("qwer",upd.toString());
                     }
                     NotificationCompat.Builder b=new NotificationCompat.Builder(context,"gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l).setContentTitle(upd.child("sender").getValue().toString());
                     try{

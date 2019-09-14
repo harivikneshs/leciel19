@@ -98,16 +98,17 @@ public class abt extends Fragment {
 
 
                 AlertDialog.Builder b=new AlertDialog.Builder(getContext());
-                b.setView(R.layout.feedlay);
+                View v=getLayoutInflater().inflate(R.layout.feedlay,null);
+                b.setView(v);
                 b.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String key=fb.push().getKey();
-                        View v=getLayoutInflater().inflate(R.layout.feedlay,null);
+
                         RatingBar r=(RatingBar)v.findViewById(R.id.rating);
                         EditText f=(EditText)v.findViewById(R.id.feedin) ;
                         fb.child(key).child("comment").setValue(f.getText().toString());
-                        fb.child(key).child("rating").setValue(r.getNumStars());
+                        fb.child(key).child("rating").setValue(r.getRating());
                         Snackbar.make(root.findViewById(R.id.ll),"Thanks for giving your feedback",Snackbar.LENGTH_LONG).show();
 
 

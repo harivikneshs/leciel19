@@ -84,12 +84,13 @@ public class about extends AppCompatActivity {
 
 
                 AlertDialog.Builder b=new AlertDialog.Builder(about.this);
-                b.setView(R.layout.feedlay);
+                View v=getLayoutInflater().inflate(R.layout.feedlay,null);
+                b.setView(v);
                 b.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                       String key=fb.push().getKey();
-                      View v=getLayoutInflater().inflate(R.layout.feedlay,null);
+
                       RatingBar r=(RatingBar)v.findViewById(R.id.rating);
                       EditText f=(EditText)v.findViewById(R.id.feedin) ;
                       fb.child(key).child("comment").setValue(f.getText().toString());
