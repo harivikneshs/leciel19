@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             	//Toast.makeText(getApplicationContext(), "Will be updated soon!", Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(getApplicationContext(),LoginActivity.class);
+                Intent i=new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(i);
             }
         });

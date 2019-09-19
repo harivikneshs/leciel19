@@ -2,29 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.barebrains.leciel19">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <application
-        android:name="com.barebrains.leciel19.gyanith19"
+        android:name=".gyanith19"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="Leciel 19"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Noactionbar">
-        <activity android:name="com.barebrains.leciel19.register" />
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".register" />
         <activity
-            android:name="com.barebrains.leciel19.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name="com.barebrains.leciel19.MainActivity"
+            android:name=".MainActivity"
             android:label="Leciel 19" />
-        <activity android:name="com.barebrains.leciel19.event_categories" />
-        <activity android:name="com.barebrains.leciel19.event_details" />
-        <activity android:name="com.barebrains.leciel19.profile" />
-        <activity android:name="com.barebrains.leciel19.splash">
+        <activity android:name=".event_categories" />
+        <activity android:name=".event_details" />
+        <activity android:name=".profile" />
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,14 +29,18 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.barebrains.leciel19.notreceiver">
+        <activity android:name=".about" />
+
+        <receiver android:name=".notreceiver">
             <intent-filter>
                 <action android:name="gyanith.notify" />
             </intent-filter>
         </receiver>
-
-        <activity android:name="com.barebrains.leciel19.about" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
