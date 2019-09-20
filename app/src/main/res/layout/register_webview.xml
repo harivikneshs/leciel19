@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/lla"
+        android:id="@+id/llav"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@drawable/gradient"
@@ -15,7 +12,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/backbutton"
+            android:id="@+id/backbuttona"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
@@ -34,9 +31,10 @@
             android:textSize="24sp" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/reg_listview"
+    <WebView
+        android:id="@+id/reg_webview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lla"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/llav"/>
+
 </RelativeLayout>
