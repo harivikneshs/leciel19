@@ -47,7 +47,7 @@ public class notreceiver extends BroadcastReceiver {
                 if(count>sp.getLong("notcount",0)){
                     for(DataSnapshot chi:dataSnapshot.getChildren()){
                         upd=chi;
-                        Log.d("qwer",upd.toString());
+                        //Log.d("qwer",upd.toString());
                     }
                     NotificationCompat.Builder b=new NotificationCompat.Builder(context,"gyanith").setAutoCancel(true).setSmallIcon(R.drawable.l).setContentTitle(upd.child("sender").getValue().toString());
                     try{
